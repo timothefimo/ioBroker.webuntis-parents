@@ -1,0 +1,91 @@
+{
+    "common": {
+        "name": "webuntis-parents",
+        "version": "0.1.0",
+        "news": {
+            "0.1.0": {
+                "en": "Initial release: timetable for parent and student accounts",
+                "de": "Erste Version: Stundenplan für Eltern- und Schülerlogin"
+            }
+        },
+        "titleLang": {
+            "en": "WebUntis (parents)",
+            "de": "WebUntis (Eltern)"
+        },
+        "desc": {
+            "en": "Timetable from WebUntis for all children of a parent account (also works with student accounts)",
+            "de": "Stundenplan aus WebUntis für alle Kinder eines Elternaccounts (funktioniert auch mit Schülerlogin)"
+        },
+        "authors": ["timothefimo"],
+        "keywords": ["webuntis", "untis", "school", "schule", "stundenplan", "timetable", "eltern", "parents"],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "webuntis-parents.png",
+        "extIcon": "https://raw.githubusercontent.com/timothefimo/ioBroker.webuntis-parents/main/admin/webuntis-parents.png",
+        "readme": "https://github.com/timothefimo/ioBroker.webuntis-parents/blob/main/README.md",
+        "enabled": true,
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "misc-data",
+        "compact": true,
+        "connectionType": "cloud",
+        "dataSource": "poll",
+        "tier": 3,
+        "adminUI": {
+            "config": "json"
+        },
+        "dependencies": [
+            { "js-controller": ">=5.0.19" }
+        ],
+        "globalDependencies": [
+            { "admin": ">=6.13.16" }
+        ]
+    },
+    "native": {
+        "server": "",
+        "school": "",
+        "username": "",
+        "password": "",
+        "interval": 30,
+        "studentIds": "",
+        "formatId": 1
+    },
+    "encryptedNative": ["password"],
+    "protectedNative": ["password"],
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": { "name": "Information" },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Verbunden mit WebUntis",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.lastUpdate",
+            "type": "state",
+            "common": {
+                "role": "value.time",
+                "name": "Letzte erfolgreiche Aktualisierung",
+                "type": "number",
+                "read": true,
+                "write": false,
+                "def": 0
+            },
+            "native": {}
+        }
+    ]
+}

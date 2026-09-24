@@ -1,0 +1,31 @@
+{
+    "name": "iobroker.webuntis-parents",
+    "version": "0.1.0",
+    "description": "WebUntis timetable for parent and student accounts",
+    "author": "timothefimo",
+    "homepage": "https://github.com/timothefimo/ioBroker.webuntis-parents",
+    "license": "MIT",
+    "keywords": ["ioBroker", "webuntis", "untis", "timetable", "stundenplan", "school"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/timothefimo/ioBroker.webuntis-parents"
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "dependencies": {
+        "@iobroker/adapter-core": "^3.2.3",
+        "axios": "^1.7.9"
+    },
+    "main": "main.js",
+    "files": [
+        "admin/",
+        "lib/",
+        "main.js",
+        "io-package.json",
+        "LICENSE"
+    ],
+    "scripts": {
+        "test": "node test/parser.test.js"
+    }
+}

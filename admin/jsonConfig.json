@@ -1,0 +1,62 @@
+{
+    "i18n": false,
+    "type": "panel",
+    "items": {
+        "_header": {
+            "type": "header",
+            "text": "WebUntis Zugang",
+            "size": 3
+        },
+        "server": {
+            "type": "text",
+            "label": "Server",
+            "help": "z.B. xyz.webuntis.com (aus der WebUntis-URL)",
+            "xs": 12, "sm": 12, "md": 6, "lg": 4
+        },
+        "school": {
+            "type": "text",
+            "label": "Schule",
+            "help": "Wert hinter ?school= in der WebUntis-URL",
+            "xs": 12, "sm": 12, "md": 6, "lg": 4
+        },
+        "username": {
+            "type": "text",
+            "label": "Benutzername",
+            "help": "Eltern- oder Schülerlogin",
+            "newLine": true,
+            "xs": 12, "sm": 12, "md": 6, "lg": 4
+        },
+        "password": {
+            "type": "password",
+            "label": "Passwort",
+            "xs": 12, "sm": 12, "md": 6, "lg": 4
+        },
+        "_header2": {
+            "type": "header",
+            "text": "Optionen",
+            "size": 3,
+            "newLine": true
+        },
+        "interval": {
+            "type": "number",
+            "label": "Abfrageintervall (Minuten)",
+            "min": 10,
+            "max": 1440,
+            "xs": 12, "sm": 6, "md": 4, "lg": 3
+        },
+        "studentIds": {
+            "type": "text",
+            "label": "Schüler-IDs (optional)",
+            "help": "leer = alle Kinder automatisch, sonst kommagetrennt",
+            "xs": 12, "sm": 6, "md": 4, "lg": 3
+        },
+        "formatId": {
+            "type": "number",
+            "label": "formatId",
+            "help": "Standard 1, bei leerem Stundenplan 2 probieren",
+            "min": 1,
+            "max": 20,
+            "xs": 12, "sm": 6, "md": 4, "lg": 3
+        }
+    }
+}
